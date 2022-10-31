@@ -5,7 +5,13 @@ public class Ingresso {
     private float valorIngresso;
     private String dataHoraCompra;
 
-    public int imprimeIngresso() {
-        
+    public void imprimirIngresso() {
+        System.out.println("------------------");
+        System.out.println(numeroIngresso);
+        System.out.println(assentoIngresso);
+        System.out.println(tipoIngresso);
+        System.out.println(valorIngresso);
+        System.out.println(dataHoraCompra);
+        System.out.println("------------------");
     }
 }
