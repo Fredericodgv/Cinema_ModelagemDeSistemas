@@ -8,6 +8,16 @@ public class Sessao {
     private int ingressosComprados;
     private int ingressosRestantes;
 
+    private Filme filme;
+    private Sala sala;
+
+    public Sessao(Date dataSessao, String horaSessao, String estadoSessao, int ingressosSessao, int ingressosComprados, int ingressosRestantes) {
+        this.dataSessao = dataSessao;
+        this.horaSessao = horaSessao;
+        this.estadoSessao = estadoSessao;
+        this.ingressosSessao = ingressosSessao;
+    }
+
     public Date getDataSessao() {
         return dataSessao;
     }
@@ -57,10 +67,22 @@ public class Sessao {
     }
 
     public void exibirSessao(){
-
+        System.out.println("Data da sessão: " + getDataSessao());
+        System.out.println("Hora da sessão: " + getHoraSessao());
+        System.out.println("Estado da sessão: " + getEstadoSessao());
+        System.out.println("Ingressos disponíveis: " + getIngressosSessao());
+        System.out.println("Ingressos comprados: " + getIngressosComprados());
+        System.out.println("Ingressos restantes: " + getIngressosRestantes());
+        System.out.println("Filme: " + this.filme.getTitulo());
+        System.out.println("Sala: " + this.sala.getNomeSala());
     }
 
-    public void venderIngressos(){
-
+    public void venderIngressos(Ingresso ingVendido){
+        if (ingressosRestantes == 0)
+            System.out.println("Não há mais ingressos disponíveis para esta sessão.");
+        else{
+            ingressosComprados++;
+            ingressosRestantes--;
+        }
     }
 }

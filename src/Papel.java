@@ -1,14 +1,18 @@
-package Filmes;
 
 public class Papel {
-    private int nomePessoa;
+    private String nomePessoa;
     private String papel;
 
-    public int getNomePessoa() {
+    public Papel(String nomePessoa, String papel) {
+        this.nomePessoa = nomePessoa;
+        this.papel = papel;
+    }
+
+    public String getNomePessoa() {
         return nomePessoa;
     }
 
-    public void setNomePessoa(int nomePessoa) {
+    public void setNomePessoa(String nomePessoa) {
         this.nomePessoa = nomePessoa;
     }
 

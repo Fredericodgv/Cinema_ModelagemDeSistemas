@@ -3,6 +3,12 @@ public class Sala {
     private String nomeSala;
     private int capacidade;
 
+    public Sala(int numeroSala, String nomeSala, int capacidade) {
+        this.numeroSala = numeroSala;
+        this.nomeSala = nomeSala;
+        this.capacidade = capacidade;
+    }
+
     public int getNumeroSala() {
         return numeroSala;
     }

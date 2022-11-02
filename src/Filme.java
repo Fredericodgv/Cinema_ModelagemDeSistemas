@@ -1,4 +1,4 @@
-package Filmes;
+
 
 public class Filme {
     private String titulo;
@@ -6,6 +6,14 @@ public class Filme {
     private String produtora;
     private String paisOrigem;
     private String duracao;
+
+    public Filme(String titulo, int ano, String produtora, String paisOrigem, String duracao) {
+        this.titulo = titulo;
+        this.ano = ano;
+        this.produtora = produtora;
+        this.paisOrigem = paisOrigem;
+        this.duracao = duracao;
+    }
 
     public String getTitulo() {
         return titulo;
